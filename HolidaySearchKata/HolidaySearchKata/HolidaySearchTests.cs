@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using HolidaySearchKata.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace HolidaySearchKata;
 

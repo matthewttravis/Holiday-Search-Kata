@@ -1,4 +1,4 @@
-﻿namespace HolidaySearchKata;
+﻿namespace HolidaySearchKata.Models;
 
 public class Holiday
 {

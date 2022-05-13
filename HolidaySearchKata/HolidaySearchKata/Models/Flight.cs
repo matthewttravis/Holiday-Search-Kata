@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace HolidaySearchKata;
+namespace HolidaySearchKata.Models;
 
 public class Flight
 {

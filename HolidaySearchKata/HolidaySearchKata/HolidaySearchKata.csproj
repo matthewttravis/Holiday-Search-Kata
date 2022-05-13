@@ -7,11 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="FlightData.json" />
-    <None Remove="HotelData.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Include="FlightData.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
