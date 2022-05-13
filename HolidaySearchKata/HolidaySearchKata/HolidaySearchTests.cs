@@ -65,10 +65,22 @@ namespace HolidaySearchKata
             //Traveling to: Gran Canaria Airport (LPA)
             //Departure Date: 2022/11/10
             //Duration: 14 nights
+            var query = new Query
+            {
+                DepartingFrom = Airport.AnyAirport,
+                TravelingTo = Airport.Lpa,
+                DepartureDate = new DateTime(2022, 11, 10),
+                Duration = 14
+            };
+
+            var holidaySearch = new HolidaySearch();
+
+            var results = holidaySearch.PerformSearch(query);
             
             //Expectation
             //Flight 7 and Hotel 6
-            Assert.Fail();
+            Assert.AreEqual(7, results.First().Flight.Id);
+            Assert.AreEqual(6, results.First().Hotel.Id);
         }
     }
 }
