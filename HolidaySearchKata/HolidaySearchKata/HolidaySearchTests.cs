@@ -15,8 +15,8 @@ namespace HolidaySearchKata
             //Duration: 7 nights
             var query = new Query
             {
-                DepartingFrom = "Manchester Airport (MAN)",
-                TravelingTo = "Malaga Airport (AGP)",
+                DepartingFrom = Airport.Man,
+                TravelingTo = Airport.Agp,
                 DepartureDate = new DateTime(2023, 07, 01),
                 Duration = 7
             };
@@ -41,8 +41,8 @@ namespace HolidaySearchKata
             //Duration: 10 nights
             var query = new Query
             {
-                DepartingFrom = "Any London Airport",
-                TravelingTo = "Mallorca Airport (PMI)",
+                DepartingFrom = Airport.AnyLondon,
+                TravelingTo = Airport.Pmi,
                 DepartureDate = new DateTime(2023, 06, 15),
                 Duration = 10
             };

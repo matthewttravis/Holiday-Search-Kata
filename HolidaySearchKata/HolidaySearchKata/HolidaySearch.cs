@@ -21,9 +21,9 @@ namespace HolidaySearchKata
         {
             var results = new List<Holiday>();
 
-            var flights = _flights.Where(x => x.From == query.DepartureCode && x.DepartureDate == query.DepartureDate).ToList();
+            var flights = _flights.Where(x => (x.From & query.DepartingFrom) == x.From && x.DepartureDate == query.DepartureDate).ToList();
 
-            var hotels = _hotels.Where(x => x.Nights == query.Duration && x.ArrivalDate == query.DepartureDate && x.LocalAirports.Contains(query.ArrivalCode)).ToList();
+            var hotels = _hotels.Where(x => x.Nights == query.Duration && x.ArrivalDate == query.DepartureDate && (x.LocalAirportsCombined & query.TravelingTo) == query.TravelingTo).ToList();
 
             foreach (var hotel in hotels)
             {
