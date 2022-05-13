@@ -39,10 +39,22 @@ namespace HolidaySearchKata
             //Traveling to: Mallorca Airport (PMI)
             //Departure Date: 2023/06//15
             //Duration: 10 nights
+            var query = new Query
+            {
+                DepartingFrom = "Any London Airport",
+                TravelingTo = "Mallorca Airport (PMI)",
+                DepartureDate = new DateTime(2023, 06, 15),
+                Duration = 10
+            };
+
+            var holidaySearch = new HolidaySearch();
+
+            var results = holidaySearch.PerformSearch(query);
             
             //Expectation
             //Flight 6 and Hotel 5
-            Assert.Fail();
+            Assert.AreEqual(6, results.First().Flight.Id);
+            Assert.AreEqual(5, results.First().Hotel.Id);
         }
         
         [TestMethod]
