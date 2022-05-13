@@ -13,7 +13,7 @@ namespace HolidaySearchKata
             //Traveling to: Malaga Airport (AGP)
             //Departure Date: 2023/07/01
             //Duration: 7 nights
-            const string query = "{'departingFrom': 'Manchester Airport (MAN)', 'travelingTo': 'Malaga Airport (AGP), 'departureDate': 01/07/2023, 'duration': 7}";
+            const string query = "{'departingFrom': 'Manchester Airport (MAN)', 'travelingTo': 'Malaga Airport (AGP), 'departureDate': '2023/07/01', 'duration': 7}";
 
             var holidaySearch = new HolidaySearch();
 
