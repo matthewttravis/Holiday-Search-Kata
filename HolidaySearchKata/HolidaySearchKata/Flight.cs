@@ -1,4 +1,6 @@
-﻿namespace HolidaySearchKata;
+﻿using Newtonsoft.Json;
+
+namespace HolidaySearchKata;
 
 public class Flight
 {
@@ -7,5 +9,6 @@ public class Flight
     public string From { get; set; }
     public string To { get; set; }
     public int Price { get; set; }
+    [JsonProperty(PropertyName = "departure_date")]
     public DateTime DepartureDate { get; set; }
 }
