@@ -13,10 +13,16 @@ namespace HolidaySearchKata
             //Traveling to: Malaga Airport (AGP)
             //Departure Date: 2023/07/01
             //Duration: 7 nights
+            const string query = "{'departingFrom': 'Manchester Airport (MAN)', 'travelingTo': 'Malaga Airport (AGP), 'departureDate': 01/07/2023, 'duration': 7}";
+
+            var holidaySearch = new HolidaySearch();
+
+            var results = holidaySearch.PerformSearch(query);
 
             //Expectation
             //Flight 2 and Hotel 9
-            Assert.Fail();
+            Assert.Fail("{{'flight': {'id': 2, 'airline': 'Oceanic Airlines', 'from': 'MAN', 'to': 'AGP', 'price': 245, 'departure_date': '2023-07-01'}, " +
+                        "'hotel': {'id': 9, 'name': 'Nh Malaga', 'arrival_date': '2023-07-01', 'price_per_night': 83, 'local_airports': ['AGP'], 'nights': 7}}", results.First());
         }
         
         [TestMethod]
